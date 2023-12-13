@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { PoemCard } from "./PoemCard";
+import { moonPoem } from "../moon-poem";
 const meta = {
   title: "Example/PoemCard",
   component: PoemCard,
@@ -21,5 +22,11 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: "PoemCard",
+  },
+};
+
+export const WithLongText: Story = {
+  args: {
+    children: moonPoem,
   },
 };
