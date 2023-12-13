@@ -7,8 +7,8 @@ const moonPoem =
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-screen overflow-hidden">
-      <header>
+    <main className="flex flex-col">
+      <header className="basis-1/12">
         <div className="flex justify-between">
           <div className="pl-4 pt-2">kinky towers</div>
           <div className="w-1/12">
@@ -16,16 +16,12 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="flex flex-row ">
-        <div className="flex justify-center pt-10 ">
-        <div className="w-3/4 overflow-scroll h-3/5 md:h-full md:w-1/2">
-            <PoemCard>{moonPoem}</PoemCard>
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-0 ">
-        <div className="w-64 md:w-96 ">
+      <div className="flex border border-red-500 basis-9/12">
+        <div>
           <Tower />
+        </div>
+        <div className="border border-yellow-500 rounded-lg flex flex-col justify-center basis-3/4 ">
+          <PoemCard>{moonPoem}</PoemCard>
         </div>
       </div>
     </main>
