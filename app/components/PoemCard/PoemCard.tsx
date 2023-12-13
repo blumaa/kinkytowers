@@ -1,6 +1,15 @@
-const PoemCard = ({ children }: { children: React.ReactNode }) => {
+const PoemCard = ({
+  children,
+  title,
+}: {
+  children: React.ReactNode;
+  title: string;
+}) => {
   return (
-    <div className=" border-zinc-400 rounded-lg flex overflow-scroll whitespace-pre-line shadow-md px-2 pb-4">
+    <div className={`whitespace-pre-line p-4 `}>
+      <div className="bg-gradient-to-r to-[#dde6ed] from-red-600 text-transparent bg-clip-text pb-4">
+        {title}
+      </div>
       {children}
     </div>
   );

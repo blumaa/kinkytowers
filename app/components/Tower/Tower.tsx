@@ -2,10 +2,10 @@ const Tower = () => {
   const transformTower = "translate(-200 -10)";
   return (
     <svg
-      // className="border border-sky-500"
+    className="rounded-3xl shadow-xl opacity-50 w-44 md:w-60 fixed bottom-0 right-0 md:right-32"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 350 950"
-      width="100%"
+      // width="100%"
     >
       <title>kinky_tower</title>
       <g id="buildingsidelines">

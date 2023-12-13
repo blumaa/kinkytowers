@@ -5,7 +5,7 @@ import { moonPoem } from "./components/moon-poem";
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col justify-between">
       <header>
         <div className="flex justify-between">
           <div className="pl-4 pt-2">kinky towers</div>
@@ -14,16 +14,16 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="relative">
-        <div className="border-yellow-500 rounded-lg flex flex-col items-center justify-center ">
-          <PoemCard>{moonPoem}</PoemCard>
+      <div className="md:grid md:grid-cols-12 ">
+        <div className="md:col-span-8 justify-self-center">
+          <PoemCard title="Moon Poem #156">{moonPoem}</PoemCard>
         </div>
-        <div className="absolute bottom-0">
-          <div className="w-3/4">
-            <Tower />
-          </div>
-        </div>
+        <div className="md:col-span-4 "></div>
       </div>
+      <footer className="flex justify-end">
+      <div className="text-xs text-slate-600 p-4">© 2023 <a href="mailto:desmond.blume@gmail.com" className="hover:text-sky-600 hover:underline">Desmond Blume</a></div>
+      </footer>
+      <Tower />
     </main>
   );
 }
